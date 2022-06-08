@@ -1,4 +1,51 @@
-{
-  "usuario": "aluno_ebac@teste.com",
+[
+  {
+    "nome": "Greice",
+    "sobrenome": "Pazukas",
+    "empresa": "EBAC",
+    "endereco": "Av. Paulista",
+    "numero": "2000",
+    "pais": "Brasil",
+    "cidade": "São Paulo",
+    "estado": "São Paulo",
+    "cep": "03590030",
+    "telefone": "11999999999",
+    "email": "teste@teste.com",
+    "senha": "teste@teste.com"
+
+  },
+  {
+    "nome": "Daniel",
+    "sobrenome": "Pazukas",
+    "empresa": "Luzes",
+    "endereco": "Av. Bras",
+    "numero": "2000",
+    "pais": "Brasil",
+    "cidade": "São Paulo",
+    "estado": "São Paulo",
+    "cep": "03590000",
+    "telefone": "11999999999",
+    "email": "teste22@teste.com",
+    "senha": "teste@teste.com"
+  },
+
+ {
+  "nome": "Davi",
+  "sobrenome": "Pazukas",
+  "empresa": "EBAC",
+  "endereco": "Av. Paulista",
+  "numero": "2000",
+  "pais": "Brasil",
+  "cidade": "São Paulo",
+  "estado": "São Paulo",
+  "cep": "03590030",
+  "telefone": "11999999999",
+  "email": "teste@teste.com",
   "senha": "teste@teste.com"
-}
+
+ },
+ {
+
+
+ }
+]
