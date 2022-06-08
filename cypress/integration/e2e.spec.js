@@ -2,9 +2,6 @@
 
 var faker = require('faker');
 
-import EnderecoPage from '../support/page_objects/nome-funcionliada.page'
-
-
 
 context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     /*  Como cliente 
