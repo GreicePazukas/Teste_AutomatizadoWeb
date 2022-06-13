@@ -21,51 +21,32 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
 
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
 
-        var quantidade = 1
+        var quantidade = 10
 
         //primeira compra
 
-        cy.get('#primary-menu > .menu-item-629 > a').click()
-        cy.AddProduto('Abominable Hoodie', 'L', 'Green', '1')
+        cy.AddProduto('Abominable Hoodie', 'L', 'Red', '2')
 
         //Segunda compra
 
-        cy.get('.tbay-woocommerce-breadcrumb > :nth-child(2) > a').click()
-        cy.get(':nth-child(2) > .page-numbers').click()
-        cy.AddProduto('Augusta Pullover Jacket', 'M', 'Blue', '1')
-        cy.get('.single_add_to_cart_button').click()
-
+        cy.AddProduto('Aero Daily Fitness Tee', 'XS', 'Brown', '3')
 
         //Terceira compra
 
-        cy.get('.tbay-woocommerce-breadcrumb > :nth-child(2) > a').click()
-        cy.get(':nth-child(2) > .page-numbers').click()
+        cy.AddProduto('Aether Gym Pant', '33', 'Blue', '4')
 
-        cy.AddProduto('Cassia Funnel Sweatshirt', 'S', 'White', '1')
-
-        cy.get('.single_add_to_cart_button').click()
-        cy.get('.woocommerce-message').should('contain', 'foi adicionado no seu carrinho')
-
+        
         //Quarta compra
 
-        cy.get('.tbay-woocommerce-breadcrumb > :nth-child(2) > a').click()
-        cy.get('ul.page-numbers > :nth-child(4) > .page-numbers').click()
+        cy.AddProduto('Abominable Hoodie', 'L', 'Red','1')
+
     
-        cy.AddProduto('Erica Evercool Sports Bra', 'S', 'Blue','1')
-
-        cy.get('.input-text').clear().type(quantidade)
-        cy.get('.single_add_to_cart_button').click()
-       
-
-        cy.get('.woocommerce-message > .button').click()
-       
         //Finalizando a compra com o preenchimento do Checkout
 
         let emailFaker = faker.internet.email()
         let nomeFaker  = faker.name.firstName()
         let sobrenomeFaker = faker.name.lastName()
-        cy.get('.checkout-button').click()
-        cy.preenchimentoCheckout(nomeFaker,sobrenomeFaker, 'Pazukas', 'Brasil', 'Av. Brasil', '30', 'São Paulo', '03590030', '1199999999',emailFaker, 'Felicidade')
+         cy.preenchimentoCheckout(nomeFaker,sobrenomeFaker, 'Pazukas', 'Brasil', 'Av. Brasil', '30', 'São Paulo', '03590030', '1199999999',emailFaker, 'Felicidade')
 
     });
 
