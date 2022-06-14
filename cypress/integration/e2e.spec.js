@@ -46,7 +46,9 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         let emailFaker = faker.internet.email()
         let nomeFaker  = faker.name.firstName()
         let sobrenomeFaker = faker.name.lastName()
+        
          cy.preenchimentoCheckout(nomeFaker,sobrenomeFaker, 'Pazukas', 'Brasil', 'Av. Brasil', '30', 'São Paulo', '03590030', '1199999999',emailFaker, 'Felicidade')
+         cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.')
 
     });
 
