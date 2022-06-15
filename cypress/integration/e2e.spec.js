@@ -21,8 +21,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
 
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
 
-        var quantidade = 10
-
+    
         //primeira compra
 
         cy.AddProduto('Abominable Hoodie', 'L', 'Red', '2')
